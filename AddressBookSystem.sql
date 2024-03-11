@@ -24,3 +24,6 @@ update addressbook set email = 'Robert@gmail.com' where firstName = 'Robert';
 
 delete from addressBook where firstName = 'Robert';
 select * from addressbook;
+
+select * from addressbook where city = 'mumbai';
+select * from addressbook where state = 'maharashtra';
