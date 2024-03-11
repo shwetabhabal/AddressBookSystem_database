@@ -21,3 +21,6 @@ update addressbook set phone='9656448425', email='john@gmail.com' where firstNam
 update addressbook set email= 'jane@gmail.com' where firstName= 'Jane';
 update addressbook set email = 'emily@gmail.com' where firstName = 'Emily';
 update addressbook set email = 'Robert@gmail.com' where firstName = 'Robert';
+
+delete from addressBook where firstName = 'Robert';
+select * from addressbook;
