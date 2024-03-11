@@ -17,3 +17,7 @@ insert into addressBook (firstName, lastName, address, phone, email) values
 ('Emily', 'Davis', '101 Maple St', 2468013579, 'emily.davis@example.com'),
 ('Robert', 'Brown', '222 Pine St', 3698521470, 'robert.brown@example.com');
 select * from addressbook;
+update addressbook set phone='9656448425', email='john@gmail.com' where firstName= 'John';
+update addressbook set email= 'jane@gmail.com' where firstName= 'Jane';
+update addressbook set email = 'emily@gmail.com' where firstName = 'Emily';
+update addressbook set email = 'Robert@gmail.com' where firstName = 'Robert';
