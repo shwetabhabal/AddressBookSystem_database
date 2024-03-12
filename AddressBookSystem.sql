@@ -43,3 +43,36 @@ select type, count(*) from addressbook group by type;
 insert into addressbook (firstName, lastName, address,phone, email,type) value
 ("Elena", "forbes", "401 Mystic", 9645223834, "elena@gmail.com", "friend"),
 ("Elena", "forbes", "401 Mystic", 9645223834, "elena@gmail.com", "family");
+
+create table person (
+id int primary key auto_increment,
+firstName varchar(30),
+lastName varchar(30),
+phone bigint,
+email varchar(30),
+type varchar(30)
+);
+create table address (
+id int ,
+foreign key (id) references person(id),
+address varchar(30),
+city varchar(30) default 'Mumbai',
+state varchar(30) default 'Maharashtra'
+);
+insert into person (firstName, lastName, phone, email, type) values
+("ravi", "kumar", 9965466585, "ravi@gmail.com", "friend"),
+('John', 'Doe', 1234567890, 'john.doe@gmail.com',"profession"),
+('Jane', 'Smith',  9876543210, 'jane.smith@gmail.com', "friend"),
+('Emily', 'Davis',  2468013579, 'emily.davis@gmail.com',"family"),
+("Elena", "forbes", 9645223834, "elena@gmail.com", "friend"),
+("Elena", "forbes",  9645223834, "elena@gmail.com", "family");
+
+insert into address (id, address) values
+(1,"bandra"),
+(2,'123 Main St'),
+(3,'456 Elm St'),
+(4,'101 Maple St'),
+(5,"401 Mystic"),
+(6,"401 Mystic");
+select * from person;
+select * from address;
