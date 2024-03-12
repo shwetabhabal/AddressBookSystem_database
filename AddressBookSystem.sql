@@ -28,5 +28,6 @@ select * from addressbook;
 select * from addressbook where city = 'mumbai';
 select * from addressbook where state = 'maharashtra';
 
-select city, count(id) from addressbook where city = 'mumbai';
-select state , count(id) from addressbook where state= 'maharashtra';
+select city, state, count(*) from addressBook group by city, state;
+
+select * from addressbook where city='mumbai' order by firstName;
