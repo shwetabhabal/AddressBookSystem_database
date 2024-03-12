@@ -38,3 +38,4 @@ update addressbook set type ='friend' where id=1;
 update addressbook set type = 'profession' where id=2;
 update addressbook set type='friend' where id=3;
 update addressbook set type = 'family' where id=4;
+select type, count(*) from addressbook group by type;
