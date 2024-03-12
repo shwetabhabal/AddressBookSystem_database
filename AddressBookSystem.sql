@@ -31,3 +31,10 @@ select * from addressbook where state = 'maharashtra';
 select city, state, count(*) from addressBook group by city, state;
 
 select * from addressbook where city='mumbai' order by firstName;
+
+alter table addressBook 
+add column type varchar(30);
+update addressbook set type ='friend' where id=1;
+update addressbook set type = 'profession' where id=2;
+update addressbook set type='friend' where id=3;
+update addressbook set type = 'family' where id=4;
