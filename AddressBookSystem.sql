@@ -39,3 +39,7 @@ update addressbook set type = 'profession' where id=2;
 update addressbook set type='friend' where id=3;
 update addressbook set type = 'family' where id=4;
 select type, count(*) from addressbook group by type;
+
+insert into addressbook (firstName, lastName, address,phone, email,type) value
+("Elena", "forbes", "401 Mystic", 9645223834, "elena@gmail.com", "friend"),
+("Elena", "forbes", "401 Mystic", 9645223834, "elena@gmail.com", "family");
