@@ -76,3 +76,20 @@ insert into address (id, address) values
 (6,"401 Mystic");
 select * from person;
 select * from address;
+
+select * from person
+inner join address 
+on person.id = address.id
+where address.city = 'Mumbai' and address.state='Maharashtra';
+select city, state, count(*) from person
+inner join address
+on person.id = address.id
+where address.city = 'Mumbai' and address.state='Maharashtra';
+select * from person
+inner join address
+on person.id = address.id
+order by person.firstName;
+select type, count(*) from person
+inner join address
+on person.id = address.id
+group by type;
